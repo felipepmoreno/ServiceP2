@@ -23,6 +23,8 @@ namespace ServiceP2
                     webBuilder.UseStartup<Startup>();
 #if DEBUG
                     webBuilder.UseUrls("https://localhost:5001");
+#else
+                    webBuilder.UseUrls("https://service-p2.azurewebsites.net/api/p2/validate");
 #endif
                 });
     }
