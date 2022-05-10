@@ -37,7 +37,7 @@ namespace ServiceP2
 #if DEBUG
                     var request = new HttpRequestMessage(HttpMethod.Post, "https://localhost:5002/api/p3/generate-token");
 #else
-                    var request = new HttpRequestMessage(HttpMethod.Post, "https://servicep3.azurewebsites.net/api/p3/generate-token");
+                    var request = new HttpRequestMessage(HttpMethod.Post, "https://service-p3.azurewebsites.net/api/p3/generate-token");
 #endif
                     request.Headers.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
                     request.Content = new StringContent(jsonModel, Encoding.UTF8);
